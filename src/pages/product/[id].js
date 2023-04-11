@@ -1,30 +1,33 @@
 import Link from "next/link";
 import Image from "next/image";
+import styles from '../../styles/Product.module.css'
 
 export default function Post({ product }) {
   const info = [product]
   return (
-    <div>
-      {
-        info.map((item, id) => {
-          return (
-            <article key={id}>
-            <Image 
-              src={`https://platzi-avo.vercel.app/${item.image}`}
-              alt={`This images is about ${item.title}`}
-              width={300}
-              height={300}
-              priority
-            />
-            <h2>{item.name}</h2>
-            <p>{item.attributes.description}</p>
-            <p>{item.price}</p>
-          </article>
-          )
-        })
-      }
-      <Link href='/'>Regresar a home</Link>
-    </div>
+    <main className={styles.main}>
+      <section className={styles.container}>
+        {
+          info.map((item, id) => {
+            return (
+              <article key={id} className={styles.card}>
+              <Image 
+                src={`https://platzi-avo.vercel.app/${item.image}`}
+                alt={`This images is about ${item.title}`}
+                width={300}
+                height={300}
+                priority
+                className={styles.image}
+              />
+              <h2 className={styles.title}>{item.name}</h2>
+              <p className={styles.paragraph}>{item.attributes.description}</p>
+              <p className={styles.price}>{item.price}</p>
+            </article>
+            )
+          })
+        }
+      </section>
+    </main>
   )
 }
 

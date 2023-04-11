@@ -54,7 +54,6 @@
 
 .phoneNumberMobile {
   padding: 2px 0;
-  font-weight: 800;
 }
 
 
@@ -64,10 +63,11 @@
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
   padding: 30px 0;
   font-size: 3rem;
   font-weight: 800;
-  text-align: center;
   text-transform: uppercase;
   color: #7eb827;
 }
@@ -106,6 +106,21 @@
     width: 768px;
     max-width: 90%;
   }
+  
+  .containerMenuTop {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .containerMenuTop a {
+    padding: 0 10px;
+    transition: all .3s;
+  }
+  
+  .containerMenuTop a:hover {
+    transition: all .3s;
+    color: #414141;
+  }
 
   .searchIcon, .loginIcon, .cartIcon {
     display: flex;
@@ -118,11 +133,13 @@
     padding: 0 10px;
     font-size: 1.4rem;
     font-weight: 600;
+    transition: all .3s;
     color: #fff;
   }
-
+  
   .searchIcon span:hover, .loginIcon span:hover, .cartIcon span:hover {
-    color: #2b5f00;
+    transition: all .3s;
+    color: #414141;
   }
   
 }

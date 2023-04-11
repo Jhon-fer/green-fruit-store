@@ -1,0 +1,84 @@
+.footer {
+  width: 100%;
+  background-color: #414141;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 90%;
+}
+
+.contact, .information, .rrss {
+  padding-bottom: 10px;
+}
+
+.title {
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.contact div, .containerLinks, .containerRRSS  {
+  padding: 10px 0;
+}
+
+.links {
+  display: flex;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+.links:hover {
+  color: #7eb827;
+}
+
+.attribution {
+  padding-bottom: 5px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.attribution span {
+  color: #7eb827;
+}
+
+.attribution span:hover {
+  color: #fff;
+}
+
+/* MEDIA QUERIES */
+/* MEDIUM SCREEN */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 768px;
+    width: 90%;
+  }
+  
+  .contact, .information, .rrss {
+    padding: 0 10px;
+    width: 33.3333%;
+  }  
+}
+
+/* LARGE SCREEN */
+@media (min-width: 1024px) {
+  .container {
+    padding-top: 60px;
+    max-width: 1024px;
+    width: 1024px;
+  }
+
+}
