@@ -15,18 +15,21 @@ export default function Post({ product }) {
               <div key={id} className={styles.card}>
                 <article className={styles.containerCard}>
                   <Image 
-                  src={`https://platzi-avo.vercel.app/${item.image}`}
-                  alt={`This images is about ${item.title}`}
-                  width={300}
-                  height={300}
-                  priority
-                  className={styles.image}
-                />
-                <h2 className={styles.title}>{item.name}</h2>
-                <p className={styles.price}><span>Precio:</span> ${item.price}</p>
-                <div className={styles.containerBuy}>
-                  <Counter />
-                </div>
+                    src={`https://platzi-avo.vercel.app/${item.image}`}
+                    alt={`This images is about ${item.title}`}
+                    width={300}
+                    height={300}
+                    priority
+                    className={styles.image}
+                  />
+                  <div className={styles.containerInfo}>
+                    <h2 className={styles.title}>{item.name}</h2>
+                    <p className={styles.sku}>SKU: {item.sku}</p>
+                    <p className={styles.price}><span>Precio:</span> ${item.price}</p>
+                    <div>
+                      <Counter />
+                    </div>
+                  </div>
                 </article>
 
                 <article className={styles.containerText}>
@@ -35,7 +38,7 @@ export default function Post({ product }) {
                 </article>
 
                 <article className={styles.productsRelated}>
-                  <h3>Productos relacionados</h3>
+                  <h3>Productos relacionados - Próximamente...</h3>
                   
                 </article>
               </div>
@@ -46,7 +49,6 @@ export default function Post({ product }) {
     </main>
   )
 }
-
 
 export async function getStaticPaths() {
   const res = await fetch('https://platzi-avo.vercel.app/api/avo')
