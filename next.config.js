@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['platzi-avo.vercel.app'],
   },
+  output: 'export'
 }
 
 module.exports = nextConfig
