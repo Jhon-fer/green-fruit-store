@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['platzi-avo.vercel.app'],
+    unoptimized: true,
   },
   output: 'export'
 }
