@@ -5,7 +5,8 @@ const nextConfig = {
     domains: ['platzi-avo.vercel.app'],
     unoptimized: true,
   },
-  output: 'export'
+  output: 'export',
+  distDir: 'out',
 }
 
 module.exports = nextConfig
